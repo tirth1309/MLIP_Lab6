@@ -16,7 +16,9 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # TODO fill out the path to conda here
-                source mlip/bin/activate
+                python3 -m venv mlip_lab6
+                source mlip_lab6/bin/activate
+                pip3 install pytest numpy pandas scikit-learn
 
                 # TODO Complete the command to run pytest
                 pytest
